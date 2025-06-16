@@ -111,6 +111,9 @@ console.log(b.split("D"));
 console.log(b.slice(1, 3));
 console.log(b.includes("ABC"));
 console.log(b.substring(1, 4));
+a=b.replace("ABC", "abcaa")
+console.log(a);
+console.log(a.replaceAll("a","Y"));
 // console.log(b.substr(1, 5));
 
 a = "  a bc  a";
@@ -122,5 +125,5 @@ let j = a.length - 1;
 while (a[j] == " ") {
   j--;
 }
-b = a.slice(i,j+1)
-console.log(b)
+b = a.slice(i, j + 1);
+console.log(b);
