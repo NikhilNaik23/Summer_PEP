@@ -111,10 +111,14 @@ console.log(b.split("D"));
 console.log(b.slice(1, 3));
 console.log(b.includes("ABC"));
 console.log(b.substring(1, 4));
-a=b.replace("ABC", "abcaa")
-console.log(a);
-console.log(a.replaceAll("a","Y"));
 // console.log(b.substr(1, 5));
+a = b.replace("ABC", "abcaa");
+console.log(a);
+console.log(a.replaceAll("a", "Y"));
+console.log(a.endsWith("GHI"));
+console.log(a.endsWith("DEF"));
+console.log(a.startsWith("DEF"));
+console.log(a.startsWith("abc"));
 
 a = "  a bc  a";
 let i = 0;
@@ -127,3 +131,34 @@ while (a[j] == " ") {
 }
 b = a.slice(i, j + 1);
 console.log(b);
+
+const secondsToTime = (seconds) => {
+  let d = 24 * 60 * 60;
+  let h = 60 * 60;
+  let m = 60;
+
+  let day = 0;
+  if (seconds >= d) {
+    day = seconds / d;
+    seconds = seconds % d;
+  }
+  let hour = 0;
+  if (seconds >= h) {
+    hour = seconds / h;
+    seconds = seconds % h;
+  }
+  let min = 0;
+  if (seconds >= m) {
+    min = seconds / m;
+    seconds = seconds % m;
+  }
+  console.log(
+    `${day < 10 ? "0" + Math.floor(day) : Math.floor(day)}:${
+      hour < 10 ? "0" + Math.floor(hour) : Math.floor(hour)
+    }:${min < 10 ? "0" + Math.floor(min) : Math.floor(min)}:${
+      seconds < 10 ? "0" + Math.floor(seconds) : Math.floor(seconds)
+    }`
+  );
+};
+
+secondsToTime(86458);
