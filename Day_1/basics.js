@@ -161,4 +161,31 @@ const secondsToTime = (seconds) => {
   );
 };
 
-secondsToTime(86458);
+secondsToTime(846000);
+
+const lengthOfLongestWordInSentence = (sentence) => {
+  let cnt = 0;
+  var j = 0;
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence.at(i) === " ") {
+      let prevMax = cnt;
+      cnt = sentence.slice(j, i).length;
+      cnt = Math.max(cnt, prevMax);
+      j = i + 1;
+    }
+    if (i === sentence.length - 1) {
+      let prevMax = cnt;
+      cnt = sentence.slice(j, i + 1).length;
+      cnt = Math.max(cnt, prevMax);
+      j = i + 1;
+    }
+  }
+  return cnt;
+};
+
+console.log(
+  lengthOfLongestWordInSentence(
+    "Computers have a lots of memory but no imagination"
+  )
+);
+
