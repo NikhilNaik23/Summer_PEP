@@ -62,3 +62,24 @@ console.log(filteredArr);
 
 const total = arr.reduce((sum, i) => (sum += i));
 console.log(total);
+
+//closures
+function parentFun() {
+  const x = 49;
+  return function childFun() {
+    console.log("I'm in child function");
+    console.log(x);
+  };
+}
+let val = parentFun();
+val();
+
+function calculatePower(y) {
+  return function calc(x) {
+    return x ** y;
+  };
+}
+
+val = calculatePower(5);
+let res = val(3);
+console.log(res);
