@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="clickMe">Click me</button>
+    <!--External File second_session.js-->
+    <button id="dbl">Double Click</button>
+    <button id="btn">Click</button>
+
+    <script>
+      document.getElementById("dbl").addEventListener("dblclick", () => {
+        alert("Double clicked");
+      });
+
+      let btn = document.getElementById("btn");
+      function sayHello() {
+        alert("Heyy");
+        btn.removeEventListener("click", sayHello);
+      }
+
+      btn.addEventListener("click",sayHello)
+    </script>
+  </body>
+</html>

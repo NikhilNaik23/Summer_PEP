@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter Application</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        user-select: none;
+      }
+      h1{
+        font-size: 84px;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      #container {
+        height: 90vh;
+        width: 98vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+      }
+      #counter {
+        font-size: 164px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: aqua;
+      }
+      button{
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: white;
+        border: none;
+        border-radius: 5rem;
+        font-size: large;
+      }
+      button:hover{
+        background-color: grey;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <marquee behavior="slide" direction="left">Hey</marquee>
+    <div id="container">
+        <h1>Counter Application</h1>
+      <h2 id="counter"></h2>
+      <div>
+        <button id="minus">-</button>
+        <button id="plus">+</button>
+      </div>
+      <button id="reset">reset</button>
+    </div>
+    <script src="./events.js"></script>
+  </body>
+</html>
