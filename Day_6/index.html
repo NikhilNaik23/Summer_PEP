@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black">
+    <nav
+      class="h-12 bg-black text-white flex justify-around md:gap-10 items-center gap-2  md:text-xl"
+    >
+      <div class="flex justify-center md:gap-10 items-center gap-2">
+        <a href="./index.html">Home</a>
+        <a href="./index.html">Shop</a>
+        <a href="">About Us</a>
+        <a href="">Contact</a>
+        <a href="./register.html">Register</a>
+      </div>
+      <a href="">🛒</a>
+    </nav>
+    <main>
+      <div>
+        <marquee>
+          <img
+            src="https://miro.medium.com/v2/resize:fit:1340/0*EVTnmRoDHotaLydW"
+            alt="ecommerce photo"
+          />
+        </marquee>
+      </div>
+      <div
+        id="products"
+        class="h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-10"
+      ></div>
+    </main>
+    <br>
+    <footer class="text-white text-xs flex justify-around">
+      <p>&copy; 2025 Ecommerce. All rights reserved.</p>
+      <nav>
+        <a href="">About</a> | <a href="">Contact</a> |
+        <a href="">Privacy Policy</a>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
