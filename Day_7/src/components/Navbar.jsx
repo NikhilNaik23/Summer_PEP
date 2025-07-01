@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineClose } from "react-icons/md";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
   const onButtonClick = () => {
@@ -43,20 +47,29 @@ const Navbar = () => {
               </a>
             </div>
             <div className="flex gap-3">
-                <button
-                  className="bg-red-600 px-3 py-2 hover:text-red-900 rounded-xl"
-                  onClick={onButtonClick}
-                >
-                  Login
-                </button>
-                <button
-                  className="bg-blue-600 hover:text-blue-900 px-3 py-2 rounded-xl "
-                  onMouseEnter={mouseEnter}
-                  onDoubleClick={doubleClick}
-                >
-                  Register
-                </button>
+              <button
+                className="bg-red-600 px-3 py-2 hover:text-red-900 rounded-xl"
+                onClick={onButtonClick}
+              >
+                Login
+              </button>
+              <button
+                className="bg-blue-600 hover:text-blue-900 px-3 py-2 rounded-xl "
+                onMouseEnter={mouseEnter}
+                onDoubleClick={doubleClick}
+              >
+                Register
+              </button>
+              <Button variant="contained" color="success">
+                Admin
+              </Button>
             </div>
+            <a href="/" className="relative">
+              <MdOutlineShoppingCart className="text-4xl" />
+              <div className="absolute top-[-10px] right-[1px] text-xs bg-red-600 p-1 rounded-4xl">
+                5
+              </div>
+            </a>
           </div>
         </nav>
         {sidebar ? (

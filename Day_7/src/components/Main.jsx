@@ -7,11 +7,7 @@ const Main = () => {
   return (
     <div className="text-center"> 
       <h1>{title}</h1>
-      <ul>
-        {arr.map((num, idx) => (
-          <li key={idx}>{num}</li>
-        ))}
-      </ul>
+      
       <p>{arr}</p>
     </div>
   );
