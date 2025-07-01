@@ -71,7 +71,7 @@ const Hero = () => {
           )}
         </div>
       </div>
-      <p className="text-xs text-gray-600 absolute bottom-0 left-0">
+      <p className="text-xs text-gray-600 pt-10 pb-5">
         Offer valid on selected styles. Available online & in-stores. *T&C Apply
       </p>
     </section>
