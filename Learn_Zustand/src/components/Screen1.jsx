@@ -12,7 +12,6 @@ const Screen1 = ({ setScreen }) => {
         return
       }
     }
-
     setScreen(2);
   };
   return (
@@ -23,7 +22,6 @@ const Screen1 = ({ setScreen }) => {
           <button
             onClick={() => {
               validatePersonalInfo();
-              //   setScreen(3);
             }}
             className="text-white bg-purple-500 px-10 py-2 rounded-xl"
           >
