@@ -1,10 +1,31 @@
 import React from "react";
 
 const Feedback = () => {
+  const submitForm = (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    const userData = {};
+    const formData = new FormData(form);
+    for (let [k, v] of formData.entries()) {
+      userData[k] = v;
+    }
+    fetch("http://localhost:5000/feedback", {
+      method: "POST",
+      body: JSON.stringify(userData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  };
   return (
     <div className="min-h-screen max-w-7xl flex justify-center items-center flex-col select-none">
       <h1 className="text-4xl text-black font-bold p-2">Feedback Form</h1>
-      <form className="grid grid-cols-1 md:grid-cols-2 gap-1.5">
+      <form
+        className="grid grid-cols-1 md:grid-cols-2 gap-1.5"
+        onSubmit={submitForm}
+        method="POST"
+      >
         <div className="flex justify-between items-center">
           <label htmlFor="first_name" className="text-xl ">
             FirstName:
